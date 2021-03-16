@@ -57,3 +57,12 @@ video_date_col <- videos %>%
 
 video_date_col %>% select(video_date)
 ```
+
+#### join data
+
+```{r}
+
+```
+
+TODO Ling covid data to video
+
