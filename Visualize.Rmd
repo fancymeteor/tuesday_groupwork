@@ -22,6 +22,7 @@ knitr::opts_chunk$set(
 
 ```{r}
 # Load libraries:
+# install.packages('tidyverse')
 library(tidyverse)
 library(httr)
 library(readxl)
@@ -30,6 +31,7 @@ library(tsibble)
 library(forcats)
 library(plotly)
 library(ggridges)
+library(janitor)
 
 ```
 
@@ -41,3 +43,17 @@ library(ggridges)
 
 create a table 
 
+```{r}
+videos <- read_csv("data/videos.csv") %>% janitor::clean_names()
+glimpse(videos)
+```
+
+## Part 2: Prepare the data
+
+```{r}
+video_date_col <- videos %>% 
+  mutate(video_date=
+           dmy(str_extract(title,pattern="[0-9][0-9]\\.[0-9][0-9]\\.[0-9][0-9][0-9][0-9]")))
+
+video_date_col %>% select(video_date)
+```
