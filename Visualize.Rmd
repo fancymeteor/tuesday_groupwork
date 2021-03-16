@@ -3,9 +3,9 @@
 title: "Visualisation of COVID-19 and "
 author: "Tueaday Group F"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 
