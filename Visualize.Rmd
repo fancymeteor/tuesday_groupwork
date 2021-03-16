@@ -1,0 +1,43 @@
+
+---
+title: "Visualisation of COVID-19 and "
+author: "Tueaday Group F"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+
+```{r include=FALSE}
+# General chunk options (applied to all subsequent chunks):
+
+knitr::opts_chunk$set(
+  # echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+
+```{r}
+# Load libraries:
+library(tidyverse)
+library(httr)
+library(readxl)
+library(lubridate)
+library(tsibble)
+library(forcats)
+library(plotly)
+library(ggridges)
+
+```
+
+## Introduction
+
+## Part 1: Get the data
+
+### load People
+
+create a table 
+
