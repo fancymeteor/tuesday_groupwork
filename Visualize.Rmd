@@ -1,7 +1,7 @@
 
 ---
-title: "Visualisation of COVID-19 and "
-author: "Tueaday Group F"
+title: "Visualisation of COVID-19 and video presence"
+author: "Tuesday Group F"
 output:
   html_document:
     df_print: paged
@@ -41,7 +41,11 @@ library(janitor)
 
 ### load People
 
-create a table 
+```{r}
+#TODO Task-B
+```
+
+### load video information
 
 ```{r}
 videos <- read_csv("data/videos.csv") %>% janitor::clean_names()
@@ -50,12 +54,13 @@ glimpse(videos)
 
 ## Part 2: Prepare the data
 
+Extract date and convert to date format
 ```{r}
-video_date_col <- videos %>% 
+videos <- videos %>% 
   mutate(video_date=
            dmy(str_extract(title,pattern="[0-9][0-9]\\.[0-9][0-9]\\.[0-9][0-9][0-9][0-9]")))
 
-video_date_col %>% select(video_date)
+videos %>% select(video_date)
 ```
 
 #### join data
